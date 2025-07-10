@@ -3,5 +3,8 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/home1/'
+  base: '/',  # ⚠️ IMPORTANTE: Barra simples para raiz
+  build: {
+    outDir: 'dist'
+  }
 })
