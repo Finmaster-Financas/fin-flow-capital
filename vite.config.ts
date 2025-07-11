@@ -1,10 +1,12 @@
 ﻿import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/',  # ⚠️ IMPORTANTE: Barra simples para raiz
+  base: '/',
   build: {
-    outDir: 'dist'
+    outDir: 'docs',  # GitHub Pages reconhece esta pasta
+    emptyOutDir: true
   }
 })
