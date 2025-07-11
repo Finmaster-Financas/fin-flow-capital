@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   base: '/',
   build: {
-    outDir: 'docs',  # GitHub Pages reconhece esta pasta
+    outDir: 'docs',  // GitHub Pages reconhece esta pasta
     emptyOutDir: true
   }
 })
