@@ -15,7 +15,7 @@ export default defineConfig({
     outDir: 'docs',
     emptyOutDir: true,
     rollupOptions: {
-      external: ['@/components/ui/toaster']
+      input: path.resolve(__dirname, 'index.html')
     }
   }
 })
