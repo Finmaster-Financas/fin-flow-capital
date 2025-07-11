@@ -4,9 +4,18 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/',
+  base: '/home1/',
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+      '@/components': path.resolve(__dirname, './src/components')
+    }
+  },
   build: {
-    outDir: 'docs',  // GitHub Pages reconhece esta pasta
-    emptyOutDir: true
+    outDir: 'docs',
+    emptyOutDir: true,
+    rollupOptions: {
+      external: ['@/components/ui/toaster']
+    }
   }
 })
